@@ -10,6 +10,12 @@ import UIKit
 
 class ExperimentViewController: UIViewController {
 
+    @IBOutlet weak var StepCount_Label: UILabel!
+    @IBOutlet weak var SubjectName_Label: UILabel!
+    @IBOutlet weak var StepColorView_ProgressView: StepProgreessView!
+    @IBOutlet weak var PresentForceView_ProgressView: ForceProgressView!
+    @IBOutlet weak var PresentForceColorView_ImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
