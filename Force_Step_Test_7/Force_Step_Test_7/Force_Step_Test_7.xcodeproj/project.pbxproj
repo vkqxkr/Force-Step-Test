@@ -15,6 +15,7 @@
 		880F78C523C6CEF500A81368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 880F78C323C6CEF500A81368 /* LaunchScreen.storyboard */; };
 		880F78D023C6CEF500A81368 /* Force_Step_Test_7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880F78CF23C6CEF500A81368 /* Force_Step_Test_7Tests.swift */; };
 		880F78DB23C6CEF500A81368 /* Force_Step_Test_7UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880F78DA23C6CEF500A81368 /* Force_Step_Test_7UITests.swift */; };
+		8820F52523CB84A200374055 /* ForceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820F52423CB84A200374055 /* ForceButton.swift */; };
 		88213E9423C77433004ECBB9 /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88213E9323C77433004ECBB9 /* ExperimentViewController.swift */; };
 		88DC117423C7760700017797 /* StepProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC117323C7760700017797 /* StepProgressView.swift */; };
 		88DC117623C777AC00017797 /* ForceProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC117523C777AC00017797 /* ForceProgressView.swift */; };
@@ -52,6 +53,7 @@
 		880F78D623C6CEF500A81368 /* Force_Step_Test_7UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Force_Step_Test_7UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		880F78DA23C6CEF500A81368 /* Force_Step_Test_7UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Force_Step_Test_7UITests.swift; sourceTree = "<group>"; };
 		880F78DC23C6CEF500A81368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8820F52423CB84A200374055 /* ForceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceButton.swift; sourceTree = "<group>"; };
 		88213E9323C77433004ECBB9 /* ExperimentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
 		88DC117323C7760700017797 /* StepProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepProgressView.swift; sourceTree = "<group>"; };
 		88DC117523C777AC00017797 /* ForceProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceProgressView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				880F78C623C6CEF500A81368 /* Info.plist */,
 				88DC117323C7760700017797 /* StepProgressView.swift */,
 				88DC117523C777AC00017797 /* ForceProgressView.swift */,
+				8820F52423CB84A200374055 /* ForceButton.swift */,
 			);
 			path = Force_Step_Test_7;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				880F78B923C6CEF300A81368 /* AppDelegate.swift in Sources */,
 				88DC117423C7760700017797 /* StepProgressView.swift in Sources */,
 				880F78BB23C6CEF300A81368 /* SceneDelegate.swift in Sources */,
+				8820F52523CB84A200374055 /* ForceButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

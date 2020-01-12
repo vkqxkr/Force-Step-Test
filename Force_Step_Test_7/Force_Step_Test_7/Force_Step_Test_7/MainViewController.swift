@@ -69,14 +69,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         Step4Border_String = Step4Border_TextField.text ?? ""
         Step5Border_String = Step5Border_TextField.text ?? ""
         Step6Border_String = Step6Border_TextField.text ?? ""
-        if StepCount_String == "1" {
-            Step1Border_TextField.isEnabled = false
-            Step2Border_TextField.isEnabled = false
-            Step3Border_TextField.isEnabled = false
-            Step4Border_TextField.isEnabled = false
-            Step5Border_TextField.isEnabled = false
-            Step6Border_TextField.isEnabled = false
-        } else if StepCount_String == "2" {
+        if StepCount_String == "2" {
             Step1Border_TextField.isEnabled = true
             Step2Border_TextField.isEnabled = false
             Step3Border_TextField.isEnabled = false
@@ -122,5 +115,20 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // get a reference to the second view controller
+        if segue.identifier == "Main_to_Experiment" {
+            let secondViewController = segue.destination as! ExperimentViewController
+            secondViewController.SubjectName_String = SubjectName_String
+            secondViewController.StayTime_String = StayTime_String
+            secondViewController.RepeatCount_String = RepeatCount_String
+            secondViewController.StepCount_String = StepCount_String
+            secondViewController.Step1Border_String = Step1Border_String
+            secondViewController.Step2Border_String = Step2Border_String
+            secondViewController.Step3Border_String = Step3Border_String
+            secondViewController.Step4Border_String = Step4Border_String
+            secondViewController.Step5Border_String = Step5Border_String
+            secondViewController.Step6Border_String = Step6Border_String
+        }
+    }
 }

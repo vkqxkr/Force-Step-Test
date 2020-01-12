@@ -105,7 +105,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="I85-Ei-dbG" kind="show" id="nDP-6A-B05"/>
+                                            <segue destination="I85-Ei-dbG" kind="show" identifier="Main_to_Experiment" id="nDP-6A-B05"/>
                                         </connections>
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFu-Ye-mpn">
@@ -370,12 +370,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Esd-CO-JVe" customClass="StepProgreessView" customModule="Force_Step_Test_7" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgz-cA-knP">
                                         <rect key="frame" x="20" y="128.66666666666666" width="315" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="HT4-OF-7Ab"/>
+                                            <constraint firstAttribute="height" constant="60" id="qkS-7w-hmV"/>
                                         </constraints>
-                                    </progressView>
+                                    </view>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kpG-aJ-sVE" customClass="ForceProgressView" customModule="Force_Step_Test_7" customModuleProvider="target">
                                         <rect key="frame" x="20" y="218.66666666666669" width="315" height="2"/>
                                     </progressView>
@@ -395,7 +396,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUa-rM-wqU">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUa-rM-wqU" customClass="ForceButton" customModule="Force_Step_Test_7" customModuleProvider="target">
                                         <rect key="frame" x="117.66666666666669" y="530" width="120" height="90"/>
                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -406,21 +407,22 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="Esd-CO-JVe" firstAttribute="centerX" secondItem="ekU-c4-P5G" secondAttribute="centerX" id="1uf-rw-4bG"/>
+                                    <constraint firstItem="tgz-cA-knP" firstAttribute="top" secondItem="vvY-mP-cTA" secondAttribute="bottom" constant="30" id="4PE-Ka-WXh"/>
                                     <constraint firstItem="vvY-mP-cTA" firstAttribute="centerX" secondItem="ekU-c4-P5G" secondAttribute="centerX" id="6sf-uD-EOl"/>
                                     <constraint firstAttribute="trailing" secondItem="kpG-aJ-sVE" secondAttribute="trailing" constant="20" id="7tf-VH-eUn"/>
                                     <constraint firstItem="kpG-aJ-sVE" firstAttribute="leading" secondItem="ekU-c4-P5G" secondAttribute="leading" constant="20" id="9V2-WO-Wpt"/>
+                                    <constraint firstItem="tgz-cA-knP" firstAttribute="centerX" secondItem="ekU-c4-P5G" secondAttribute="centerX" id="MLX-hA-vfw"/>
                                     <constraint firstItem="vvY-mP-cTA" firstAttribute="top" secondItem="8Wd-Ym-rF1" secondAttribute="bottom" constant="10" id="QVh-Cv-NZb"/>
                                     <constraint firstItem="kpG-aJ-sVE" firstAttribute="centerX" secondItem="ekU-c4-P5G" secondAttribute="centerX" id="SwA-ni-hyL"/>
+                                    <constraint firstItem="kpG-aJ-sVE" firstAttribute="top" secondItem="tgz-cA-knP" secondAttribute="bottom" constant="30" id="UP5-Gp-69Q"/>
                                     <constraint firstItem="tkR-tn-mZv" firstAttribute="centerX" secondItem="ekU-c4-P5G" secondAttribute="centerX" id="UQO-2f-q7y"/>
+                                    <constraint firstItem="tgz-cA-knP" firstAttribute="leading" secondItem="ekU-c4-P5G" secondAttribute="leading" constant="20" id="V4N-WJ-WGP"/>
                                     <constraint firstItem="I9g-Fa-I9K" firstAttribute="centerX" secondItem="ekU-c4-P5G" secondAttribute="centerX" id="WWt-2L-r8m"/>
                                     <constraint firstItem="8Wd-Ym-rF1" firstAttribute="top" secondItem="ekU-c4-P5G" secondAttribute="top" constant="40" id="Z5i-U4-gVI"/>
-                                    <constraint firstItem="Esd-CO-JVe" firstAttribute="top" secondItem="vvY-mP-cTA" secondAttribute="bottom" constant="30" id="a83-bB-ZDV"/>
                                     <constraint firstItem="VUa-rM-wqU" firstAttribute="centerX" secondItem="ekU-c4-P5G" secondAttribute="centerX" id="ch0-Ea-ocU"/>
-                                    <constraint firstItem="Esd-CO-JVe" firstAttribute="leading" secondItem="ekU-c4-P5G" secondAttribute="leading" constant="20" id="l45-Rb-rd3"/>
+                                    <constraint firstAttribute="trailing" secondItem="tgz-cA-knP" secondAttribute="trailing" constant="20" id="k0X-Aq-4NH"/>
                                     <constraint firstItem="tkR-tn-mZv" firstAttribute="top" secondItem="I9g-Fa-I9K" secondAttribute="bottom" constant="30" id="lYI-IE-ZlM"/>
-                                    <constraint firstItem="kpG-aJ-sVE" firstAttribute="top" secondItem="Esd-CO-JVe" secondAttribute="bottom" constant="30" id="qgx-4d-8lU"/>
-                                    <constraint firstAttribute="trailing" secondItem="Esd-CO-JVe" secondAttribute="trailing" constant="20" id="ubc-Qn-fu5"/>
+                                    <constraint firstItem="kpG-aJ-sVE" firstAttribute="top" secondItem="tgz-cA-knP" secondAttribute="bottom" constant="30" id="qgx-4d-8lU"/>
                                     <constraint firstAttribute="bottom" secondItem="VUa-rM-wqU" secondAttribute="bottom" constant="50" id="w0Q-xi-A64"/>
                                     <constraint firstItem="I9g-Fa-I9K" firstAttribute="top" secondItem="kpG-aJ-sVE" secondAttribute="bottom" constant="30" id="wgM-zT-ion"/>
                                     <constraint firstItem="8Wd-Ym-rF1" firstAttribute="centerX" secondItem="ekU-c4-P5G" secondAttribute="centerX" id="xbq-li-C15"/>
@@ -438,16 +440,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="YYt-3J-CTQ"/>
                     <connections>
+                        <outlet property="ExperimentCount_Label" destination="tkR-tn-mZv" id="YYh-Jo-dus"/>
+                        <outlet property="ForceButton_Button" destination="VUa-rM-wqU" id="v9y-74-eOz"/>
                         <outlet property="PresentForceColorView_ImageView" destination="I9g-Fa-I9K" id="Ujb-9p-6aC"/>
                         <outlet property="PresentForceView_ProgressView" destination="kpG-aJ-sVE" id="K0o-hi-dD9"/>
-                        <outlet property="StepColorView_ProgressView" destination="Esd-CO-JVe" id="iEx-1s-pMy"/>
+                        <outlet property="StepColorView_View" destination="tgz-cA-knP" id="ThD-JY-Jks"/>
                         <outlet property="StepCount_Label" destination="8Wd-Ym-rF1" id="45J-aI-QfZ"/>
                         <outlet property="SubjectName_Label" destination="vvY-mP-cTA" id="C0X-Hz-XNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agJ-py-jyJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575.3623188405797" y="250.44642857142856"/>
+            <point key="canvasLocation" x="1575.2" y="249.7536945812808"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L4H-qP-PjZ">
