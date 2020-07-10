@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewController_main.swift
 //  Force_Step_Test_8
 //
 //  Created by JinHyuck Park on 2020/07/10.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController_main: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
-

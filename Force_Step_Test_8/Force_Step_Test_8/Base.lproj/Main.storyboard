@@ -1,24 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0QW-eL-Dk7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController_main" customModule="Force_Step_Test_8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwC-1T-XDR">
+                                <rect key="frame" x="157.5" y="287" width="99" height="30"/>
+                                <state key="normal" title="Non_feedback"/>
+                                <connections>
+                                    <segue destination="Okm-vY-45j" kind="show" id="pbb-g6-6i8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwN-ev-jFs">
+                                <rect key="frame" x="154.5" y="363" width="105" height="30"/>
+                                <state key="normal" title="feedback_color"/>
+                                <connections>
+                                    <segue destination="xyY-7h-f90" kind="show" id="oWl-of-vYN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdE-0R-Zxg">
+                                <rect key="frame" x="152" y="501" width="110" height="30"/>
+                                <state key="normal" title="feedback_graph"/>
+                                <connections>
+                                    <segue destination="T2X-yu-mH2" kind="show" id="GG8-y4-QtB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pwC-1T-XDR" firstAttribute="centerX" secondItem="fdE-0R-Zxg" secondAttribute="centerX" id="0vC-3f-Y00"/>
+                            <constraint firstItem="pwC-1T-XDR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QQv-nK-wUn"/>
+                            <constraint firstItem="fdE-0R-Zxg" firstAttribute="top" secondItem="mwN-ev-jFs" secondAttribute="bottom" constant="108" id="Rf2-wK-bhq"/>
+                            <constraint firstItem="pwC-1T-XDR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="199" id="dbC-wj-LRo"/>
+                            <constraint firstItem="fdE-0R-Zxg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="elF-WY-iMI"/>
+                            <constraint firstItem="mwN-ev-jFs" firstAttribute="top" secondItem="pwC-1T-XDR" secondAttribute="bottom" constant="46" id="jGs-Gy-uhK"/>
+                            <constraint firstItem="mwN-ev-jFs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sJD-n8-2aU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Car-TD-9sp"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-43" y="124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pzz-6P-rEH">
+            <objects>
+                <viewController id="Okm-vY-45j" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yjj-Ss-17t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oe-bS-bBh">
+                                <rect key="frame" x="122" y="122" width="95.5" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단계 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dg-Qc-731">
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciu-VT-16U">
+                                        <rect key="frame" x="63.5" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kta-aZ-1Pf">
+                                <rect key="frame" x="88" y="283" width="129.5" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반복 횟수 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCX-AF-xUC">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w5o-Z3-twX">
+                                        <rect key="frame" x="97.5" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miF-dd-9Wr">
+                                <rect key="frame" x="179" y="562" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="실험 시작"/>
+                                <connections>
+                                    <segue destination="Xtb-QB-A4e" kind="show" id="c6J-DM-ydZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nFH-kD-bxi"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QNU-lq-mFg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRN-IC-s7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="R5M-R3-qvb">
+            <objects>
+                <viewController id="Xtb-QB-A4e" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h9N-pz-Pj2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="2zx-VW-20N"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Glv-A3-IL4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osK-tV-5Hb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="129"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WJL-Lr-Oqp">
+            <objects>
+                <viewController id="xyY-7h-f90" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Cg-Lr-etK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ftg-S5-hQy">
+                                <rect key="frame" x="135" y="227" width="95.5" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단계 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGZ-93-3bM">
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HhG-qt-Sfl">
+                                        <rect key="frame" x="63.5" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFq-uy-7ft">
+                                <rect key="frame" x="101" y="388" width="129.5" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반복 횟수 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfl-gr-rwG">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96A-Fn-Y11">
+                                        <rect key="frame" x="97.5" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG5-ID-n46">
+                                <rect key="frame" x="192" y="667" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="실험 시작"/>
+                                <connections>
+                                    <segue destination="km0-W3-AB8" kind="show" id="IhE-fh-WFO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Fmq-yi-7iV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sCz-gV-1i9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cj-0T-h1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="860"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="J9i-o4-o3a">
+            <objects>
+                <viewController id="km0-W3-AB8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Udw-dH-zl9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="593-pM-gAx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rL2-J9-tyv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwG-wY-bNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="848"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dyt-Du-kVZ">
+            <objects>
+                <viewController id="T2X-yu-mH2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q7w-7x-pDO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vX0-RR-GeW">
+                                <rect key="frame" x="147" y="162" width="95.5" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단계 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiR-bo-lba">
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rri-6y-vvc">
+                                        <rect key="frame" x="63.5" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiU-iN-nKx">
+                                <rect key="frame" x="113" y="323" width="129.5" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반복 횟수 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIe-xi-rwi">
+                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aea-Kq-Sb4">
+                                        <rect key="frame" x="97.5" y="0.0" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNX-RK-vnG">
+                                <rect key="frame" x="204" y="602" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="실험 시작"/>
+                                <connections>
+                                    <segue destination="GQd-WD-LHZ" kind="show" id="sbT-qB-zgx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="57V-oj-awc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kfW-gE-EEA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVy-PO-l9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="1549"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="srp-wF-VZT">
+            <objects>
+                <viewController id="GQd-WD-LHZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1fS-mJ-tfs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PZN-Df-kc3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mIv-vU-c6f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPw-U3-3R7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="1548"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="etj-Mw-udd">
+            <objects>
+                <navigationController id="0QW-eL-Dk7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aRA-5q-KAG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kRf-lh-b84"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gyy-Cm-wvo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-894" y="124"/>
         </scene>
     </scenes>
 </document>
