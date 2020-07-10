@@ -9,18 +9,11 @@
 import UIKit
 
 class ForceButton: UIButton {
-    var startTime: TimeInterval = 0
-    var currentTime: TimeInterval = 0
-    var previous_Time: Double = 0.0
-    var begin_time: TimeInterval = 0
-    var finish_Time: TimeInterval = 0
-    var temp_Time: TimeInterval = 0
     var button = ""
     var temp_Button = ""
-    var temp_State_Button = ""
+    var SelectForceView_Bool = true
     var max_force: CGFloat = 0.0
     var temp_Force: CGFloat = 0.0
-    var temp_State_Force: CGFloat = 0.0
     var StepCount_Int: Int = 0
     var StepBorder_DoubleList: [Double] = []
     
@@ -32,18 +25,17 @@ class ForceButton: UIButton {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        startTime = 0
-        currentTime = 0
-        previous_Time = 0.0
         max_force = 0.0
         button = ""
         if let touch = touches.first {
             if #available(iOS 9.0, *) {
                 if traitCollection.forceTouchCapability == UIForceTouchCapability.available {
-                    startTime = Date.timeIntervalSinceReferenceDate
                     let force = touch.force/touch.maximumPossibleForce
-                    if force > max_force {
-                        max_force = force
+                    
+                    if SelectForceView_Bool {
+                        if force > max_force {
+                            max_force = force
+                        }
                     }
                     if StepCount_Int == 2 {
                         if force < 0.2 {
@@ -159,286 +151,355 @@ class ForceButton: UIButton {
         if let touch = touches.first {
             if #available(iOS 9.0, *) {
                 if traitCollection.forceTouchCapability == UIForceTouchCapability.available {
-                    currentTime = Date.timeIntervalSinceReferenceDate
-                    previous_Time = startTime
                     let force = touch.force/touch.maximumPossibleForce
-                    SetStateForce(state_force: force)
-                    let elapsedTime = (currentTime - startTime) * 1000
-                    if elapsedTime < 1000 {
+                    
+                    if SelectForceView_Bool {
                         if force > max_force {
                             max_force = force
                             SetForce(force: max_force)
-                            
-                            
-                            
                             if StepCount_Int == 2 {
                                 if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
                                     button = "g"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
                                     button = "P"
                                     SetColor(color: button)
                                 } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.blue;
                                     button = "B"
                                     SetColor(color: button)
                                 } else {
+                                    self.backgroundColor = UIColor.black
                                     button = "b"
                                     SetColor(color: button)
                                 }
                             } else if StepCount_Int == 3 {
                                 if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
                                     button = "g"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
                                     button = "P"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
                                     button = "B"
                                     SetColor(color: button)
                                 } else if force < 1.0 {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
                                     button = "S"
                                     SetColor(color: button)
                                 } else {
+                                    self.backgroundColor = UIColor.black
                                     button = "b"
                                     SetColor(color: button)
                                 }
                             } else if StepCount_Int == 4 {
                                 if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
                                     button = "g"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
                                     button = "P"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
                                     button = "B"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[2]) {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
                                     button = "S"
                                     SetColor(color: button)
                                 } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.green;
                                     button = "G"
                                     SetColor(color: button)
                                 } else {
+                                    self.backgroundColor = UIColor.black
                                     button = "b"
                                     SetColor(color: button)
                                 }
                             } else if StepCount_Int == 5 {
                                 if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
                                     button = "g"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
                                     button = "P"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
                                     button = "B"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[2]) {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
                                     button = "S"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[3]) {
+                                    self.backgroundColor = UIColor.green;
                                     button = "G"
                                     SetColor(color: button)
                                 } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.yellow;
                                     button = "Y"
                                     SetColor(color: button)
                                 } else {
+                                    self.backgroundColor = UIColor.black
                                     button = "b"
                                     SetColor(color: button)
                                 }
                             } else if StepCount_Int == 6 {
                                 if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
                                     button = "g"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
                                     button = "P"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
                                     button = "B"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[2]) {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
                                     button = "S"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[3]) {
+                                    self.backgroundColor = UIColor.green;
                                     button = "G"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[4]) {
+                                    self.backgroundColor = UIColor.yellow;
                                     button = "Y"
                                     SetColor(color: button)
                                 } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.orange;
                                     button = "O"
                                     SetColor(color: button)
                                 } else {
+                                    self.backgroundColor = UIColor.black
                                     button = "b"
                                     SetColor(color: button)
                                 }
                             } else {
                                 if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
                                     button = "g"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
                                     button = "P"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
                                     button = "B"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[2]) {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
                                     button = "S"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[3]) {
+                                    self.backgroundColor = UIColor.green;
                                     button = "G"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[4]) {
+                                    self.backgroundColor = UIColor.yellow;
                                     button = "Y"
                                     SetColor(color: button)
                                 } else if force < CGFloat(StepBorder_DoubleList[5]) {
+                                    self.backgroundColor = UIColor.orange;
                                     button = "O"
                                     SetColor(color: button)
                                 } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.red;
                                     button = "R"
                                     SetColor(color: button)
                                 } else {
+                                    self.backgroundColor = UIColor.black
                                     button = "b"
                                     SetColor(color: button)
                                 }
                             }
                         }
+                    } else {
+                            max_force = force
+                            SetForce(force: max_force)
+                            if StepCount_Int == 2 {
+                                if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
+                                    button = "g"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
+                                    button = "P"
+                                    SetColor(color: button)
+                                } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.blue;
+                                    button = "B"
+                                    SetColor(color: button)
+                                } else {
+                                    self.backgroundColor = UIColor.black
+                                    button = "b"
+                                    SetColor(color: button)
+                                }
+                            } else if StepCount_Int == 3 {
+                                if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
+                                    button = "g"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
+                                    button = "P"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
+                                    button = "B"
+                                    SetColor(color: button)
+                                } else if force < 1.0 {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+                                    button = "S"
+                                    SetColor(color: button)
+                                } else {
+                                    self.backgroundColor = UIColor.black
+                                    button = "b"
+                                    SetColor(color: button)
+                                }
+                            } else if StepCount_Int == 4 {
+                                if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
+                                    button = "g"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
+                                    button = "P"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
+                                    button = "B"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[2]) {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+                                    button = "S"
+                                    SetColor(color: button)
+                                } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.green;
+                                    button = "G"
+                                    SetColor(color: button)
+                                } else {
+                                    self.backgroundColor = UIColor.black
+                                    button = "b"
+                                    SetColor(color: button)
+                                }
+                            } else if StepCount_Int == 5 {
+                                if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
+                                    button = "g"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
+                                    button = "P"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
+                                    button = "B"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[2]) {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+                                    button = "S"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[3]) {
+                                    self.backgroundColor = UIColor.green;
+                                    button = "G"
+                                    SetColor(color: button)
+                                } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.yellow;
+                                    button = "Y"
+                                    SetColor(color: button)
+                                } else {
+                                    self.backgroundColor = UIColor.black
+                                    button = "b"
+                                    SetColor(color: button)
+                                }
+                            } else if StepCount_Int == 6 {
+                                if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
+                                    button = "g"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
+                                    button = "P"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
+                                    button = "B"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[2]) {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+                                    button = "S"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[3]) {
+                                    self.backgroundColor = UIColor.green;
+                                    button = "G"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[4]) {
+                                    self.backgroundColor = UIColor.yellow;
+                                    button = "Y"
+                                    SetColor(color: button)
+                                } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.orange;
+                                    button = "O"
+                                    SetColor(color: button)
+                                } else {
+                                    self.backgroundColor = UIColor.black
+                                    button = "b"
+                                    SetColor(color: button)
+                                }
+                            } else {
+                                if force < 0.2 {
+                                    self.backgroundColor = UIColor.gray;
+                                    button = "g"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[0]) {
+                                    self.backgroundColor = UIColor.purple;
+                                    button = "P"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[1]) {
+                                    self.backgroundColor = UIColor.blue;
+                                    button = "B"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[2]) {
+                                    self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
+                                    button = "S"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[3]) {
+                                    self.backgroundColor = UIColor.green;
+                                    button = "G"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[4]) {
+                                    self.backgroundColor = UIColor.yellow;
+                                    button = "Y"
+                                    SetColor(color: button)
+                                } else if force < CGFloat(StepBorder_DoubleList[5]) {
+                                    self.backgroundColor = UIColor.orange;
+                                    button = "O"
+                                    SetColor(color: button)
+                                } else if force < 1.0 {
+                                    self.backgroundColor = UIColor.red;
+                                    button = "R"
+                                    SetColor(color: button)
+                                } else {
+                                    self.backgroundColor = UIColor.black
+                                    button = "b"
+                                    SetColor(color: button)
+                                }
+                            }
                         
-                        if StepCount_Int == 2 {
-                            if force < 0.2 {
-                                self.backgroundColor = UIColor.gray;
-                                SetStateColor(state_color: "g")
-                            } else if force < CGFloat(StepBorder_DoubleList[0]) {
-                                self.backgroundColor = UIColor.purple;
-                                SetStateColor(state_color: "P")
-                            } else if force < 1.0 {
-                                self.backgroundColor = UIColor.blue;
-                                SetStateColor(state_color: "B")
-                            } else {
-                                self.backgroundColor = UIColor.black
-                                SetStateColor(state_color: "b")
-                            }
-                        } else if StepCount_Int == 3 {
-                            if force < 0.2 {
-                                self.backgroundColor = UIColor.gray;
-                                SetStateColor(state_color: "g")
-                            } else if force < CGFloat(StepBorder_DoubleList[0]) {
-                                self.backgroundColor = UIColor.purple;
-                                SetStateColor(state_color: "P")
-                            } else if force < CGFloat(StepBorder_DoubleList[1]) {
-                                self.backgroundColor = UIColor.blue;
-                                SetStateColor(state_color: "B")
-                            } else if force < 1.0 {
-                                self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-                                SetStateColor(state_color: "S")
-                            } else {
-                                self.backgroundColor = UIColor.black
-                                SetStateColor(state_color: "b")
-                            }
-                        } else if StepCount_Int == 4 {
-                            if force < 0.2 {
-                                self.backgroundColor = UIColor.gray;
-                                SetStateColor(state_color: "g")
-                            } else if force < CGFloat(StepBorder_DoubleList[0]) {
-                                self.backgroundColor = UIColor.purple;
-                                SetStateColor(state_color: "P")
-                            } else if force < CGFloat(StepBorder_DoubleList[1]) {
-                                self.backgroundColor = UIColor.blue;
-                                SetStateColor(state_color: "B")
-                            } else if force < CGFloat(StepBorder_DoubleList[2]) {
-                                self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-                                SetStateColor(state_color: "S")
-                            } else if force < 1.0 {
-                                self.backgroundColor = UIColor.green;
-                                SetStateColor(state_color: "G")
-                            } else {
-                                self.backgroundColor = UIColor.black
-                                SetStateColor(state_color: "b")
-                            }
-                        } else if StepCount_Int == 5 {
-                            if force < 0.2 {
-                                self.backgroundColor = UIColor.gray;
-                                SetStateColor(state_color: "g")
-                            } else if force < CGFloat(StepBorder_DoubleList[0]) {
-                                self.backgroundColor = UIColor.purple;
-                                SetStateColor(state_color: "P")
-                            } else if force < CGFloat(StepBorder_DoubleList[1]) {
-                                self.backgroundColor = UIColor.blue;
-                                SetStateColor(state_color: "B")
-                            } else if force < CGFloat(StepBorder_DoubleList[2]) {
-                                self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-                                SetStateColor(state_color: "S")
-                            } else if force < CGFloat(StepBorder_DoubleList[3]) {
-                                self.backgroundColor = UIColor.green;
-                                SetStateColor(state_color: "G")
-                            } else if force < 1.0 {
-                                self.backgroundColor = UIColor.yellow;
-                                SetStateColor(state_color: "Y")
-                            } else {
-                                self.backgroundColor = UIColor.black
-                                SetStateColor(state_color: "b")
-                            }
-                        } else if StepCount_Int == 6 {
-                            if force < 0.2 {
-                                self.backgroundColor = UIColor.gray;
-                                SetStateColor(state_color: "g")
-                            } else if force < CGFloat(StepBorder_DoubleList[0]) {
-                                self.backgroundColor = UIColor.purple;
-                                SetStateColor(state_color: "P")
-                            } else if force < CGFloat(StepBorder_DoubleList[1]) {
-                                self.backgroundColor = UIColor.blue;
-                                SetStateColor(state_color: "B")
-                            } else if force < CGFloat(StepBorder_DoubleList[2]) {
-                                self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-                                SetStateColor(state_color: "S")
-                            } else if force < CGFloat(StepBorder_DoubleList[3]) {
-                                self.backgroundColor = UIColor.green;
-                                SetStateColor(state_color: "G")
-                            } else if force < CGFloat(StepBorder_DoubleList[4]) {
-                                self.backgroundColor = UIColor.yellow;
-                                SetStateColor(state_color: "Y")
-                            } else if force < 1.0 {
-                                self.backgroundColor = UIColor.orange;
-                                SetStateColor(state_color: "O")
-                            } else {
-                                self.backgroundColor = UIColor.black
-                                SetStateColor(state_color: "b")
-                            }
-                        } else {
-                            if force < 0.2 {
-                                self.backgroundColor = UIColor.gray;
-                                SetStateColor(state_color: "g")
-                            } else if force < CGFloat(StepBorder_DoubleList[0]) {
-                                self.backgroundColor = UIColor.purple;
-                                SetStateColor(state_color: "P")
-                            } else if force < CGFloat(StepBorder_DoubleList[1]) {
-                                self.backgroundColor = UIColor.blue;
-                                SetStateColor(state_color: "B")
-                            } else if force < CGFloat(StepBorder_DoubleList[2]) {
-                                self.backgroundColor = UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0)
-                                SetStateColor(state_color: "S")
-                            } else if force < CGFloat(StepBorder_DoubleList[3]) {
-                                self.backgroundColor = UIColor.green;
-                                SetStateColor(state_color: "G")
-                            } else if force < CGFloat(StepBorder_DoubleList[4]) {
-                                self.backgroundColor = UIColor.yellow;
-                                SetStateColor(state_color: "Y")
-                            } else if force < CGFloat(StepBorder_DoubleList[5]) {
-                                self.backgroundColor = UIColor.orange;
-                                SetStateColor(state_color: "O")
-                            } else if force < 1.0 {
-                                self.backgroundColor = UIColor.red;
-                                SetStateColor(state_color: "R")
-                            } else {
-                                self.backgroundColor = UIColor.black
-                                SetStateColor(state_color: "b")
-                            }
-                        }
-                        SetTime(time: elapsedTime)
-                    }else {
-                        SetColor(color: "fail")
-                        SetTime(time: 1000.0)
-                        SetStateForce(state_force: 0.0)
-                        self.backgroundColor = UIColor.darkGray;
                     }
                 }
             }
@@ -451,32 +512,12 @@ class ForceButton: UIButton {
         max_force = 0.0
     }
     
-    func GetExp()-> String {
-        return "1_7_"
-    }
-    
-    func SetTime(time: TimeInterval) {
-        temp_Time = round(time * 1000) / 1000
-    }
-    
-    func GetTime()-> String {
-        return String(temp_Time)
-    }
-    
     func SetForce(force: CGFloat) {
         temp_Force = force
     }
     
     func GetForce()-> String {
         return String(Float(temp_Force))
-    }
-    
-    func SetStateForce(state_force: CGFloat) {
-        temp_State_Force = state_force
-    }
-    
-    func GetStateForce()-> Float {
-        return Float(temp_State_Force)
     }
     
     func SetColor(color: String) {
@@ -487,20 +528,21 @@ class ForceButton: UIButton {
         return temp_Button
     }
     
-    func SetStateColor(state_color: String) {
-        temp_State_Button = state_color
-    }
-    
-    func GetStateColor()-> String {
-        return temp_State_Button
-    }
-    
     func SetStepCount(StepCount: Int) {
         StepCount_Int = StepCount
     }
     
     func SetStepBorder(StepBorder: [Double]) {
         StepBorder_DoubleList = StepBorder
+        StepBorder_DoubleList.remove(at: 0)
+    }
+    
+    func SetForceView(SetForceView_String: String) {
+        if SetForceView_String == "Max" {
+            SelectForceView_Bool = true
+        } else {
+            SelectForceView_Bool = false
+        }
     }
 }
 

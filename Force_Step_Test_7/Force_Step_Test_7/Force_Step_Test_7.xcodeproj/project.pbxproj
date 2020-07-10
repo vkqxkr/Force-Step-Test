@@ -18,7 +18,6 @@
 		8820F52523CB84A200374055 /* ForceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8820F52423CB84A200374055 /* ForceButton.swift */; };
 		88213E9423C77433004ECBB9 /* ExperimentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88213E9323C77433004ECBB9 /* ExperimentViewController.swift */; };
 		88DC117423C7760700017797 /* StepProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC117323C7760700017797 /* StepProgressView.swift */; };
-		88DC117623C777AC00017797 /* ForceProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DC117523C777AC00017797 /* ForceProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		8820F52423CB84A200374055 /* ForceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceButton.swift; sourceTree = "<group>"; };
 		88213E9323C77433004ECBB9 /* ExperimentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentViewController.swift; sourceTree = "<group>"; };
 		88DC117323C7760700017797 /* StepProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepProgressView.swift; sourceTree = "<group>"; };
-		88DC117523C777AC00017797 /* ForceProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,6 @@
 				880F78C323C6CEF500A81368 /* LaunchScreen.storyboard */,
 				880F78C623C6CEF500A81368 /* Info.plist */,
 				88DC117323C7760700017797 /* StepProgressView.swift */,
-				88DC117523C777AC00017797 /* ForceProgressView.swift */,
 				8820F52423CB84A200374055 /* ForceButton.swift */,
 			);
 			path = Force_Step_Test_7;
@@ -272,7 +269,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				880F78BD23C6CEF300A81368 /* MainViewController.swift in Sources */,
-				88DC117623C777AC00017797 /* ForceProgressView.swift in Sources */,
 				88213E9423C77433004ECBB9 /* ExperimentViewController.swift in Sources */,
 				880F78B923C6CEF300A81368 /* AppDelegate.swift in Sources */,
 				88DC117423C7760700017797 /* StepProgressView.swift in Sources */,

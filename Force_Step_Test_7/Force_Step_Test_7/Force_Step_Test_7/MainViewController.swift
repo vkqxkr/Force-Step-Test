@@ -10,7 +10,9 @@ import UIKit
 
 class MainViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var SelectForceView_SegmentedControl: UISegmentedControl!
     @IBOutlet weak var SubjectName_TextField: UITextField!
+    @IBOutlet weak var RequireTime_TextField: UITextField!
     @IBOutlet weak var StayTime_TextField: UITextField!
     @IBOutlet weak var RepeatCount_TextField: UITextField!
     @IBOutlet weak var StepCount_TextField: UITextField!
@@ -22,7 +24,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var Step5Border_TextField: UITextField!
     @IBOutlet weak var Step6Border_TextField: UITextField!
     
+    var SelectForceView_String = "Max"
     var SubjectName_String = ""
+    var RequireTime_String = ""
     var StayTime_String = ""
     var RepeatCount_String = ""
     var StepCount_String = ""
@@ -37,6 +41,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         SubjectName_TextField.returnKeyType = .done
         self.SubjectName_TextField.delegate = self
+        RequireTime_TextField.returnKeyType = .done
+        self.RequireTime_TextField.delegate = self
         StayTime_TextField.returnKeyType = .done
         self.StayTime_TextField.delegate = self
         RepeatCount_TextField.returnKeyType = .done
@@ -60,6 +66,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         SubjectName_String = SubjectName_TextField.text ?? ""
+        RequireTime_String = RequireTime_TextField.text ?? ""
         StayTime_String = StayTime_TextField.text ?? ""
         RepeatCount_String = RepeatCount_TextField.text ?? ""
         StepCount_String = StepCount_TextField.text ?? ""
@@ -115,11 +122,26 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    @IBAction func SelectForceViewFunc(_ sender: UISegmentedControl) {
+        switch SelectForceView_SegmentedControl.selectedSegmentIndex {
+        case 0:
+            SelectForceView_String = "Max"
+            break
+        case 1:
+            SelectForceView_String = "non-Max"
+            break
+        default:
+            break
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // get a reference to the second view controller
         if segue.identifier == "Main_to_Experiment" {
             let secondViewController = segue.destination as! ExperimentViewController
+            secondViewController.SelectForceView_String = SelectForceView_String
             secondViewController.SubjectName_String = SubjectName_String
+            secondViewController.RequireTime_String = RequireTime_String
             secondViewController.StayTime_String = StayTime_String
             secondViewController.RepeatCount_String = RepeatCount_String
             secondViewController.StepCount_String = StepCount_String
