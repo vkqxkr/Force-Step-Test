@@ -15,6 +15,13 @@
 		88ADB7FA24B83957002A4B3F /* Force_Step_Test_8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB7F924B83957002A4B3F /* Force_Step_Test_8Tests.swift */; };
 		88ADB80524B83957002A4B3F /* Force_Step_Test_8UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB80424B83957002A4B3F /* Force_Step_Test_8UITests.swift */; };
 		88ADB81324B83CFB002A4B3F /* ViewController_main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB81224B83CFB002A4B3F /* ViewController_main.swift */; };
+		88ADB81524BAFB5A002A4B3F /* ViewController_feedback_color_menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB81424BAFB5A002A4B3F /* ViewController_feedback_color_menu.swift */; };
+		88ADB81724BAFCDB002A4B3F /* ViewController_feedback_color_experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB81624BAFCDB002A4B3F /* ViewController_feedback_color_experiment.swift */; };
+		88ADB81924BAFD25002A4B3F /* ForceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB81824BAFD25002A4B3F /* ForceButton.swift */; };
+		88ADB81B24BB007A002A4B3F /* ViewController_feedback_graph_menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB81A24BB007A002A4B3F /* ViewController_feedback_graph_menu.swift */; };
+		88ADB81D24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB81C24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift */; };
+		88ADB81F24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB81E24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift */; };
+		88ADB82124BB035D002A4B3F /* ViewController_nonfeedback_experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB82024BB035D002A4B3F /* ViewController_nonfeedback_experiment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		88ADB80424B83957002A4B3F /* Force_Step_Test_8UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Force_Step_Test_8UITests.swift; sourceTree = "<group>"; };
 		88ADB80624B83957002A4B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88ADB81224B83CFB002A4B3F /* ViewController_main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_main.swift; sourceTree = "<group>"; };
+		88ADB81424BAFB5A002A4B3F /* ViewController_feedback_color_menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_feedback_color_menu.swift; sourceTree = "<group>"; };
+		88ADB81624BAFCDB002A4B3F /* ViewController_feedback_color_experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_feedback_color_experiment.swift; sourceTree = "<group>"; };
+		88ADB81824BAFD25002A4B3F /* ForceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceButton.swift; sourceTree = "<group>"; };
+		88ADB81A24BB007A002A4B3F /* ViewController_feedback_graph_menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_feedback_graph_menu.swift; sourceTree = "<group>"; };
+		88ADB81C24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_feedback_graph_experiment.swift; sourceTree = "<group>"; };
+		88ADB81E24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_nonfeedback_menu.swift; sourceTree = "<group>"; };
+		88ADB82024BB035D002A4B3F /* ViewController_nonfeedback_experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_nonfeedback_experiment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +120,13 @@
 				88ADB7EB24B83957002A4B3F /* Assets.xcassets */,
 				88ADB7ED24B83957002A4B3F /* LaunchScreen.storyboard */,
 				88ADB7F024B83957002A4B3F /* Info.plist */,
+				88ADB81E24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift */,
+				88ADB82024BB035D002A4B3F /* ViewController_nonfeedback_experiment.swift */,
+				88ADB81424BAFB5A002A4B3F /* ViewController_feedback_color_menu.swift */,
+				88ADB81624BAFCDB002A4B3F /* ViewController_feedback_color_experiment.swift */,
+				88ADB81A24BB007A002A4B3F /* ViewController_feedback_graph_menu.swift */,
+				88ADB81C24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift */,
+				88ADB81824BAFD25002A4B3F /* ForceButton.swift */,
 			);
 			path = Force_Step_Test_8;
 			sourceTree = "<group>";
@@ -259,8 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88ADB81524BAFB5A002A4B3F /* ViewController_feedback_color_menu.swift in Sources */,
+				88ADB81924BAFD25002A4B3F /* ForceButton.swift in Sources */,
+				88ADB81F24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift in Sources */,
+				88ADB81B24BB007A002A4B3F /* ViewController_feedback_graph_menu.swift in Sources */,
 				88ADB7E324B83955002A4B3F /* AppDelegate.swift in Sources */,
 				88ADB7E524B83955002A4B3F /* SceneDelegate.swift in Sources */,
+				88ADB82124BB035D002A4B3F /* ViewController_nonfeedback_experiment.swift in Sources */,
+				88ADB81D24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift in Sources */,
+				88ADB81724BAFCDB002A4B3F /* ViewController_feedback_color_experiment.swift in Sources */,
 				88ADB81324B83CFB002A4B3F /* ViewController_main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
