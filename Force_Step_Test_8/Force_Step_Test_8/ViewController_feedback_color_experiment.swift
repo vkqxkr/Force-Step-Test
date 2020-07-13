@@ -13,7 +13,6 @@ class ViewController_feedback_color_experiment: UIViewController {
     @IBOutlet weak var StepCount_Label: UILabel!
     @IBOutlet weak var SubjectName_Label: UILabel!
     @IBOutlet weak var StepColorView_View: UIView!
-    @IBOutlet weak var PresentForceView_ProgressView: UIProgressView!
     @IBOutlet weak var PresentForceColorView_ImageView: UIImageView!
     @IBOutlet weak var ExperimentCount_Label: UILabel!
     @IBOutlet weak var ForceButton_Button: ForceButton!
@@ -120,7 +119,6 @@ class ViewController_feedback_color_experiment: UIViewController {
         StepCount_Label.text = StepCount_String + "단계"
         PresentForceColorView_ImageView.backgroundColor = StepColor_UIColor[Colors_IntList[0]]
         SubjectName_Label.text = SubjectName_String
-        PresentForceView_ProgressView.progress = 0.0
         ForceButton_Button.SetStepCount(StepCount: StepCount_Int)
         ForceButton_Button.SetStepBorder(StepBorder: StepBorder_DoubleList)
         ForceButton_Button.SetForceView(SetForceView_String: SelectForceView_String)
@@ -135,7 +133,6 @@ class ViewController_feedback_color_experiment: UIViewController {
         if FinishTime_TimeInterval - StartTime_TimeInterval > Double(RequireTime_String)! {
             ForceButton_Button.isEnabled = false
             ForceButton_Button.SetForce(force: 0.0)
-            PresentForceView_ProgressView.progress = 0.0
         }
         if PresentStepColor != ForceButton_Button.GetColor() {
             PresentStepColor = ForceButton_Button.GetColor()
@@ -147,16 +144,13 @@ class ViewController_feedback_color_experiment: UIViewController {
             SuccessColor_String = PresentStepColor
             ForceButton_Button.isEnabled = false
             ForceButton_Button.SetForce(force: 0.0)
-            PresentForceView_ProgressView.progress = 0.0
         }
-        PresentForceView_ProgressView.progress = Float(ForceButton_Button.GetForce())!
     }
     
     @IBAction func EndTouchFunc_ForceButton(_ sender: ForceButton) {
         ForceButton_Button.isEnabled = true
         FinishTime_TimeInterval = Date.timeIntervalSinceReferenceDate
         TimeDifference_TimeInterval = FinishTime_TimeInterval - StartTime_TimeInterval
-        PresentForceView_ProgressView.progress = 0.0
         PresentStepColor = ""
         Success_Bool = false
         StartTime_Bool = true

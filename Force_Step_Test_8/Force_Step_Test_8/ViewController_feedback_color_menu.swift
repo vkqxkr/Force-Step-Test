@@ -56,6 +56,34 @@ class ViewController_feedback_color_menu: UIViewController, UITextFieldDelegate 
             secondViewController.StayTime_String = StayTime_String
             secondViewController.RepeatCount_String = RepeatCount_String
             secondViewController.StepCount_String = StepCount_String
+            if Int(StepCount_String) == 2 {
+                secondViewController.Step1Border_String = "0.6"
+            } else if Int(StepCount_String) == 3 {
+                secondViewController.Step1Border_String = "0.46"
+                secondViewController.Step2Border_String = "0.73"
+            } else if Int(StepCount_String) == 4 {
+                secondViewController.Step1Border_String = "0.4"
+                secondViewController.Step2Border_String = "0.6"
+                secondViewController.Step3Border_String = "0.8"
+            } else if Int(StepCount_String) == 5 {
+                secondViewController.Step1Border_String = "0.36"
+                secondViewController.Step2Border_String = "0.52"
+                secondViewController.Step3Border_String = "0.68"
+                secondViewController.Step4Border_String = "0.84"
+            } else if Int(StepCount_String) == 6 {
+                secondViewController.Step1Border_String = "0.33"
+                secondViewController.Step2Border_String = "0.46"
+                secondViewController.Step3Border_String = "0.59"
+                secondViewController.Step4Border_String = "0.72"
+                secondViewController.Step5Border_String = "0.86"
+            } else {
+                secondViewController.Step1Border_String = "0.3142857"
+                secondViewController.Step2Border_String = "0.4285714"
+                secondViewController.Step3Border_String = "0.5428571"
+                secondViewController.Step4Border_String = "0.6571428"
+                secondViewController.Step5Border_String = "0.7714285"
+                secondViewController.Step6Border_String = "0.8857142"
+            }
         }
     }
 }

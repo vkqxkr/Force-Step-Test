@@ -115,11 +115,11 @@
 			children = (
 				88ADB7E224B83955002A4B3F /* AppDelegate.swift */,
 				88ADB7E424B83955002A4B3F /* SceneDelegate.swift */,
-				88ADB81224B83CFB002A4B3F /* ViewController_main.swift */,
 				88ADB7E824B83955002A4B3F /* Main.storyboard */,
 				88ADB7EB24B83957002A4B3F /* Assets.xcassets */,
 				88ADB7ED24B83957002A4B3F /* LaunchScreen.storyboard */,
 				88ADB7F024B83957002A4B3F /* Info.plist */,
+				88ADB81224B83CFB002A4B3F /* ViewController_main.swift */,
 				88ADB81E24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift */,
 				88ADB82024BB035D002A4B3F /* ViewController_nonfeedback_experiment.swift */,
 				88ADB81424BAFB5A002A4B3F /* ViewController_feedback_color_menu.swift */,
