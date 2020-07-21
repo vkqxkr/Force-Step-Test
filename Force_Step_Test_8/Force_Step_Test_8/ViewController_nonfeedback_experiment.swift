@@ -15,7 +15,7 @@ class ViewController_nonfeedback_experiment: UIViewController {
     @IBOutlet weak var FullStep_Image: UIImageView!
     @IBOutlet weak var PresentForceColorView_ImageView: UIImageView!
     @IBOutlet weak var ExperimentCount_Label: UILabel!
-    @IBOutlet weak var ForceButton_Button: ForceButton!
+    @IBOutlet weak var ForceButton_Button: ForceButton_non!
     
     var StepCount_Int = 0
     let StepColor_UIColor = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0), UIColor.blue, UIColor.purple, UIColor.gray]
@@ -28,7 +28,7 @@ class ViewController_nonfeedback_experiment: UIViewController {
     let step_color3_image: UIImage = UIImage(named: "step3.png")!
     let step_color2_image: UIImage = UIImage(named: "step2.png")!
     
-    var SelectForceView_String = ""
+    var SelectForceView_String = "non"
     var SubjectName_String = ""
     var RequireTime_String = ""
     var StayTime_String = ""
@@ -142,12 +142,6 @@ class ViewController_nonfeedback_experiment: UIViewController {
             StartStepTime_TimeInterval = Date.timeIntervalSinceReferenceDate
         }
         FinishStepTime_TimeInterval = Date.timeIntervalSinceReferenceDate
-        if FinishStepTime_TimeInterval - StartStepTime_TimeInterval >= Double(StayTime_String)! {
-            Success_Bool = true
-            SuccessColor_String = PresentStepColor
-            ForceButton_Button.isEnabled = false
-            ForceButton_Button.SetForce(force: 0.0)
-        }
     }
     
     @IBAction func EndTouchFunc_ForceButton(_ sender: ForceButton) {
@@ -155,19 +149,14 @@ class ViewController_nonfeedback_experiment: UIViewController {
         FinishTime_TimeInterval = Date.timeIntervalSinceReferenceDate
         TimeDifference_TimeInterval = FinishTime_TimeInterval - StartTime_TimeInterval
         PresentStepColor = ""
-        Success_Bool = false
         StartTime_Bool = true
+        SuccessColor_String = ForceButton_Button.GetColor()
         if TimeDifference_TimeInterval > Double(RequireTime_String)! {
             //입력 시간 초과
             Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + "fail" + "_" + "fail" + "_" + "소요시간초과\n"
         } else {
-            // 입력 시간 준수
-            if Success_Bool {
-                if SuccessColor_String == StepColor_StringList[Colors_IntList[ExperimentCount_Int]] {
-                    Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + ForceButton_Button.GetColor() + "_" + ForceButton_Button.GetForce() + "_" + String(TimeDifference_TimeInterval) + "\n"
-                } else {
-                    Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + "fail" + "_" + "fail" + "_" + "입력실패\n"
-                }
+            if SuccessColor_String == StepColor_StringList[Colors_IntList[ExperimentCount_Int]] {
+                Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + ForceButton_Button.GetColor() + "_" + ForceButton_Button.GetForce() + "_" + String(TimeDifference_TimeInterval) + "\n"
             } else {
                 Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + "fail" + "_" + "fail" + "_" + "입력실패\n"
             }
@@ -240,16 +229,6 @@ class ViewController_nonfeedback_experiment: UIViewController {
                                 }
                             }
                         }
-//                        let b = i.components(separatedBy: "_")[1]
-//                        if b == RequireTime_String {
-//                            let c = i.components(separatedBy: "_")[2]
-//                            if c == RepeatCount_String {
-//                                let d = i.components(separatedBy: "_")[3]
-//                                if d == StepCount_String {
-//                                    file_list.append(i.components(separatedBy: "_")[4])
-//                                }
-//                            }
-//                        }
                     }
                 }
                 

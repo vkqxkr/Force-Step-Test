@@ -10,7 +10,6 @@
         <!--View Controller main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController_main" customModule="Force_Step_Test_8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -52,6 +51,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Car-TD-9sp"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-43" y="124"/>
         </scene>
@@ -652,7 +652,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYs-Qo-10a" customClass="ForceButton" customModule="Force_Step_Test_7" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYs-Qo-10a" customClass="ForceButton" customModule="Force_Step_Test_8" customModuleProvider="target">
                                         <rect key="frame" x="137" y="614" width="120" height="90"/>
                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -701,6 +701,7 @@
                     <connections>
                         <outlet property="ExperimentCount_Label" destination="xAq-gC-jop" id="RuS-c4-0uk"/>
                         <outlet property="ForceButton_Button" destination="ZYs-Qo-10a" id="4jL-PV-RkQ"/>
+                        <outlet property="FullStep_Image" destination="QbG-TP-WQb" id="IGf-hz-oXg"/>
                         <outlet property="PresentForceColorView_ImageView" destination="Cf2-u6-b89" id="FgK-Du-Kye"/>
                         <outlet property="PresentForceView_ProgressView" destination="5lm-JV-e9V" id="XQs-iJ-2dw"/>
                         <outlet property="StepCount_Label" destination="gOa-YO-NMr" id="U0E-Zl-J9z"/>
@@ -764,7 +765,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4b-I7-F7D" customClass="ForceButton" customModule="Force_Step_Test_7" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4b-I7-F7D" customClass="ForceButton_non" customModule="Force_Step_Test_8" customModuleProvider="target">
                                         <rect key="frame" x="137" y="614" width="120" height="90"/>
                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>

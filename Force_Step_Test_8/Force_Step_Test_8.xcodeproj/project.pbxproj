@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8898967824C66DF50059F32E /* ForceButton_non.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8898967724C66DF50059F32E /* ForceButton_non.swift */; };
 		88ADB7E324B83955002A4B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB7E224B83955002A4B3F /* AppDelegate.swift */; };
 		88ADB7E524B83955002A4B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB7E424B83955002A4B3F /* SceneDelegate.swift */; };
 		88ADB7EA24B83955002A4B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88ADB7E824B83955002A4B3F /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8898967724C66DF50059F32E /* ForceButton_non.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceButton_non.swift; sourceTree = "<group>"; };
 		88ADB7DF24B83955002A4B3F /* Force_Step_Test_8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Force_Step_Test_8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88ADB7E224B83955002A4B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88ADB7E424B83955002A4B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				88ADB81A24BB007A002A4B3F /* ViewController_feedback_graph_menu.swift */,
 				88ADB81C24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift */,
 				88ADB81824BAFD25002A4B3F /* ForceButton.swift */,
+				8898967724C66DF50059F32E /* ForceButton_non.swift */,
 				88ADB82724C581BC002A4B3F /* step2.png */,
 				88ADB82524C581BB002A4B3F /* step3.png */,
 				88ADB82624C581BC002A4B3F /* step4.png */,
@@ -304,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8898967824C66DF50059F32E /* ForceButton_non.swift in Sources */,
 				88ADB81524BAFB5A002A4B3F /* ViewController_feedback_color_menu.swift in Sources */,
 				88ADB81924BAFD25002A4B3F /* ForceButton.swift in Sources */,
 				88ADB81F24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift in Sources */,
