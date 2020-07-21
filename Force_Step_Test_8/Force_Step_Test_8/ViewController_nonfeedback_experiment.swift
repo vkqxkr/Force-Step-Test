@@ -12,7 +12,7 @@ class ViewController_nonfeedback_experiment: UIViewController {
 
     @IBOutlet weak var StepCount_Label: UILabel!
     @IBOutlet weak var SubjectName_Label: UILabel!
-    @IBOutlet weak var StepColorView_View: UIView!
+    @IBOutlet weak var FullStep_Image: UIImageView!
     @IBOutlet weak var PresentForceColorView_ImageView: UIImageView!
     @IBOutlet weak var ExperimentCount_Label: UILabel!
     @IBOutlet weak var ForceButton_Button: ForceButton!
@@ -20,6 +20,13 @@ class ViewController_nonfeedback_experiment: UIViewController {
     var StepCount_Int = 0
     let StepColor_UIColor = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor(red:0.00, green:0.58, blue:1.00, alpha:1.0), UIColor.blue, UIColor.purple, UIColor.gray]
     var StepColor_StringList: [String] = ["R", "O", "Y", "G", "S", "B", "P"]
+    
+    let step_color7_image: UIImage = UIImage(named: "step7.png")!
+    let step_color6_image: UIImage = UIImage(named: "step6.png")!
+    let step_color5_image: UIImage = UIImage(named: "step5.png")!
+    let step_color4_image: UIImage = UIImage(named: "step4.png")!
+    let step_color3_image: UIImage = UIImage(named: "step3.png")!
+    let step_color2_image: UIImage = UIImage(named: "step2.png")!
     
     var SelectForceView_String = ""
     var SubjectName_String = ""
@@ -59,24 +66,29 @@ class ViewController_nonfeedback_experiment: UIViewController {
         super.viewDidLoad()
         StepCount_Int = Int(StepCount_String)!
         if StepCount_Int == 2 {
+            FullStep_Image.image = self.step_color2_image
             StepBorder_DoubleList.append(Double(Step1Border_String)!)
             StepBorder_DoubleList.append(1.0)
         } else if StepCount_Int == 3 {
+            FullStep_Image.image = self.step_color3_image
             StepBorder_DoubleList.append(Double(Step1Border_String)!)
             StepBorder_DoubleList.append(Double(Step2Border_String)!)
             StepBorder_DoubleList.append(1.0)
         } else if StepCount_Int == 4 {
+            FullStep_Image.image = self.step_color4_image
             StepBorder_DoubleList.append(Double(Step1Border_String)!)
             StepBorder_DoubleList.append(Double(Step2Border_String)!)
             StepBorder_DoubleList.append(Double(Step3Border_String)!)
             StepBorder_DoubleList.append(1.0)
         } else if StepCount_Int == 5 {
+            FullStep_Image.image = self.step_color5_image
             StepBorder_DoubleList.append(Double(Step1Border_String)!)
             StepBorder_DoubleList.append(Double(Step2Border_String)!)
             StepBorder_DoubleList.append(Double(Step3Border_String)!)
             StepBorder_DoubleList.append(Double(Step4Border_String)!)
             StepBorder_DoubleList.append(1.0)
         } else if StepCount_Int == 6 {
+            FullStep_Image.image = self.step_color6_image
             StepBorder_DoubleList.append(Double(Step1Border_String)!)
             StepBorder_DoubleList.append(Double(Step2Border_String)!)
             StepBorder_DoubleList.append(Double(Step3Border_String)!)
@@ -84,6 +96,7 @@ class ViewController_nonfeedback_experiment: UIViewController {
             StepBorder_DoubleList.append(Double(Step5Border_String)!)
             StepBorder_DoubleList.append(1.0)
         } else {
+            FullStep_Image.image = self.step_color7_image
             StepBorder_DoubleList.append(Double(Step1Border_String)!)
             StepBorder_DoubleList.append(Double(Step2Border_String)!)
             StepBorder_DoubleList.append(Double(Step3Border_String)!)
@@ -93,15 +106,6 @@ class ViewController_nonfeedback_experiment: UIViewController {
             StepBorder_DoubleList.append(1.0)
         }
         var count = StepBorder_DoubleList.count - 1
-        for i in 7 - StepCount_Int..<8{
-            let subview = UIView()
-            var frame = StepColorView_View.bounds
-            frame.size.width = frame.size.width * CGFloat(StepBorder_DoubleList[count])
-            subview.frame = frame
-            subview.backgroundColor = StepColor_UIColor[i]
-            self.StepColorView_View.addSubview(subview)
-            count -= 1
-        }
         for i in 0...StepBorder_DoubleList.count - 1 {
             if i == StepBorder_DoubleList.count - 1 {
                 Result_String = Result_String + String(StepBorder_DoubleList[i]) + "\n"
@@ -121,7 +125,6 @@ class ViewController_nonfeedback_experiment: UIViewController {
         SubjectName_Label.text = SubjectName_String
         ForceButton_Button.SetStepCount(StepCount: StepCount_Int)
         ForceButton_Button.SetStepBorder(StepBorder: StepBorder_DoubleList)
-        ForceButton_Button.SetForceView(SetForceView_String: SelectForceView_String)
     }
     
     @IBAction func StartTouchFunc_ForceButton(_ sender: ForceButton) {

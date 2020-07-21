@@ -22,6 +22,12 @@
 		88ADB81D24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB81C24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift */; };
 		88ADB81F24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB81E24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift */; };
 		88ADB82124BB035D002A4B3F /* ViewController_nonfeedback_experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ADB82024BB035D002A4B3F /* ViewController_nonfeedback_experiment.swift */; };
+		88ADB82824C581BC002A4B3F /* step5.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ADB82224C581BB002A4B3F /* step5.png */; };
+		88ADB82924C581BC002A4B3F /* step7.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ADB82324C581BB002A4B3F /* step7.png */; };
+		88ADB82A24C581BC002A4B3F /* step6.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ADB82424C581BB002A4B3F /* step6.png */; };
+		88ADB82B24C581BC002A4B3F /* step3.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ADB82524C581BB002A4B3F /* step3.png */; };
+		88ADB82C24C581BC002A4B3F /* step4.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ADB82624C581BC002A4B3F /* step4.png */; };
+		88ADB82D24C581BC002A4B3F /* step2.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ADB82724C581BC002A4B3F /* step2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		88ADB81C24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_feedback_graph_experiment.swift; sourceTree = "<group>"; };
 		88ADB81E24BB030A002A4B3F /* ViewController_nonfeedback_menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_nonfeedback_menu.swift; sourceTree = "<group>"; };
 		88ADB82024BB035D002A4B3F /* ViewController_nonfeedback_experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_nonfeedback_experiment.swift; sourceTree = "<group>"; };
+		88ADB82224C581BB002A4B3F /* step5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = step5.png; path = ../../../../Desktop/step5.png; sourceTree = "<group>"; };
+		88ADB82324C581BB002A4B3F /* step7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = step7.png; path = ../../../../Desktop/step7.png; sourceTree = "<group>"; };
+		88ADB82424C581BB002A4B3F /* step6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = step6.png; path = ../../../../Desktop/step6.png; sourceTree = "<group>"; };
+		88ADB82524C581BB002A4B3F /* step3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = step3.png; path = ../../../../Desktop/step3.png; sourceTree = "<group>"; };
+		88ADB82624C581BC002A4B3F /* step4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = step4.png; path = ../../../../Desktop/step4.png; sourceTree = "<group>"; };
+		88ADB82724C581BC002A4B3F /* step2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = step2.png; path = ../../../../Desktop/step2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +139,12 @@
 				88ADB81A24BB007A002A4B3F /* ViewController_feedback_graph_menu.swift */,
 				88ADB81C24BB0085002A4B3F /* ViewController_feedback_graph_experiment.swift */,
 				88ADB81824BAFD25002A4B3F /* ForceButton.swift */,
+				88ADB82724C581BC002A4B3F /* step2.png */,
+				88ADB82524C581BB002A4B3F /* step3.png */,
+				88ADB82624C581BC002A4B3F /* step4.png */,
+				88ADB82224C581BB002A4B3F /* step5.png */,
+				88ADB82424C581BB002A4B3F /* step6.png */,
+				88ADB82324C581BB002A4B3F /* step7.png */,
 			);
 			path = Force_Step_Test_8;
 			sourceTree = "<group>";
@@ -254,8 +272,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88ADB7EF24B83957002A4B3F /* LaunchScreen.storyboard in Resources */,
+				88ADB82D24C581BC002A4B3F /* step2.png in Resources */,
+				88ADB82824C581BC002A4B3F /* step5.png in Resources */,
+				88ADB82B24C581BC002A4B3F /* step3.png in Resources */,
 				88ADB7EC24B83957002A4B3F /* Assets.xcassets in Resources */,
+				88ADB82C24C581BC002A4B3F /* step4.png in Resources */,
 				88ADB7EA24B83955002A4B3F /* Main.storyboard in Resources */,
+				88ADB82A24C581BC002A4B3F /* step6.png in Resources */,
+				88ADB82924C581BC002A4B3F /* step7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

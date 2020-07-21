@@ -537,12 +537,12 @@ class ForceButton: UIButton {
         StepBorder_DoubleList.remove(at: 0)
     }
     
-    func SetForceView(SetForceView_String: String) {
-        if SetForceView_String == "Max" {
-            SelectForceView_Bool = true
-        } else {
-            SelectForceView_Bool = false
-        }
-    }
+//    func SetForceView(SetForceView_String: String) {
+//        if SetForceView_String == "Max" {
+//            SelectForceView_Bool = true
+//        } else {
+//            SelectForceView_Bool = false
+//        }
+//    }
 }
 
