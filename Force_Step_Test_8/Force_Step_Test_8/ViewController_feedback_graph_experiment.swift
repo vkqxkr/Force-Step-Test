@@ -157,12 +157,12 @@ class ViewController_feedback_graph_experiment: UIViewController {
         SuccessColor_String = ForceButton_Button.GetColor()
         if TimeDifference_TimeInterval > Double(RequireTime_String)! {
             //입력 시간 초과
-            Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + "fail" + "_" + "fail" + "_" + "소요시간초과\n"
+            Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + ForceButton_Button.GetColor() + "_" + ForceButton_Button.GetForce() + "_" + String(TimeDifference_TimeInterval) + "_" + "소요시간초과\n"
         } else {
             if SuccessColor_String == StepColor_StringList[Colors_IntList[ExperimentCount_Int]] {
                 Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + ForceButton_Button.GetColor() + "_" + ForceButton_Button.GetForce() + "_" + String(TimeDifference_TimeInterval) + "\n"
             } else {
-                Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + "fail" + "_" + "fail" + "_" + "입력실패\n"
+                Value_String = StepColor_StringList[Colors_IntList[ExperimentCount_Int]] + "_" + ForceButton_Button.GetColor() + "_" + ForceButton_Button.GetForce() + "_" + String(TimeDifference_TimeInterval) + "_" + "입력실패\n"
             }
         }
         ForceButton_Button.SetForce(force: 0.0)
